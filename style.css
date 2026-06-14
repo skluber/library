@@ -1,0 +1,83 @@
+/* General Page Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: #212121;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Material Design Card Styling */
+.book {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    /* The classic "Material" look comes from the elevation shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.book-buttons {
+    display: flex;
+    align-self: flex-end;
+}
+
+.book:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-title {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.book-author {
+    margin: 0 0 16px 0;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.book p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%; /* Makes it a circle */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(1) brightness(0);
+}
+
+.icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.08); /* Subtle grey circle on hover */
+}
+
+.icon-btn img {
+    width: 24px; /* Standard icon size */
+    height: 24px;
+}
