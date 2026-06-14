@@ -9,29 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>My Library</h1>
-    <div class="container">
+    <div class="header">
+        <h1>My Library</h1>
+        <button id="open-modal-btn" class="fab-button">
+            <span class="icon">+</span>
+            <span class="text">Add New Book</span>
+        </button>
 
-        <div class="book">
-
-            <div class="book-info">
-                <h2 class="book-title">The Hobbit</h2>
-                <h3 class="book-author">J.R.R. Tolkien</h3>
-                <p>Pages: 310</p>
-                <p>Written in: 1937</p>
-            </div>
-
-            <div class="book-buttons">
-                <button class="icon-btn delete-btn" data-id="[BOOK ID]">
-                    <img src="icons/eye.svg" alt="Mark as read book">
-                </button>
-                <button class="icon-btn delete-btn" data-id="[BOOK ID]">
-                    <img src="icons/trash.svg" alt="Delete book">
-                </button>
-            </div>
-            
-        </div>
-
+        <dialog id="book-dialog">
+            <form id="book-form">
+                <h2>Add New Book</h2>
+                <input type="text" name="title" placeholder="Title" required>
+                <input type="text" name="author" placeholder="Author" required>
+                <input type="number" name="pages" placeholder="Pages" required>
+                <input type="number" name="year" placeholder="Year" required>
+                
+                <div class="dialog-actions">
+                    <button type="button" id="close-modal-btn">Cancel</button>
+                    <button type="submit">Add Book</button>
+                </div>
+             </form>
+</dialog>
     </div>
+
+    <div class="container">
+    </div>
+
 </body>
 </html>

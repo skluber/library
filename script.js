@@ -34,6 +34,31 @@ class Book {
     }
 }
 
+const dialog = document.getElementById('book-dialog');
+const openBtn = document.getElementById('open-modal-btn');
+const closeBtn = document.getElementById('close-modal-btn');
+const bookForm = document.getElementById('book-form');
+
+openBtn.addEventListener('click', () => dialog.showModal());
+closeBtn.addEventListener('click', () => dialog.close());
+
+bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(bookForm);
+    const title = formData.get('title');
+    const author = formData.get('author');
+    const pages = formData.get('pages');
+    const year = formData.get('year');
+
+    new Book(title, author, pages, year);
+    renderLibrary()
+
+    bookForm.reset();
+    dialog.close();
+});
+
+
 function renderLibrary() {
     const container = document.querySelector('.container');
 
@@ -87,8 +112,8 @@ const book17 = new Book("Catch-22", "Joseph Heller", "453", "1961");
 const book18 = new Book("The Handmaid's Tale", "Margaret Atwood", "311", "1985");
 const book19 = new Book("Dune", "Frank Herbert", "658", "1965");
 const book20 = new Book("Moby Dick", "Herman Melville", "635", "1851");
-
 renderLibrary();
+
 
 document.querySelector('.container').addEventListener('click', (e) => {
     const deleteBtn = e.target.closest('.delete-btn');
@@ -107,3 +132,4 @@ document.querySelector('.container').addEventListener('click', (e) => {
         renderLibrary();
     }
 });
+

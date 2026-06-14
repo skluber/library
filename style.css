@@ -6,6 +6,15 @@ body {
     padding: 20px;
 }
 
+.header {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    gap: 30px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
 h1 {
     font-weight: 500;
     margin-bottom: 24px;
@@ -80,4 +89,106 @@ h1 {
 .icon-btn img {
     width: 24px; /* Standard icon size */
     height: 24px;
+}
+
+.fab-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #6200ee; /* Material Primary Color */
+  color: white;
+  border: none;
+  border-radius: 28px; /* Circular pill shape */
+  padding: 12px 24px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.fab-button:hover {
+  background-color: #3700b3;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fab-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+/* Background overlay */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#book-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Base styles for all buttons in the dialog */
+.dialog-actions button {
+    padding: 10px 20px;
+    border-radius: 4px; /* Slight rounding */
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* 1. Cancel Button (Text Button Style) */
+#close-modal-btn {
+    background-color: transparent;
+    color: #666; /* Gray text */
+}
+
+#close-modal-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Very light gray hover */
+}
+
+/* 2. Add Book Button (Contained Button Style) */
+button[type="submit"] {
+    background-color: #6200ee; /* Material Design Deep Purple */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for elevation */
+}
+
+button[type="submit"]:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98); /* Slight click effect */
 }
